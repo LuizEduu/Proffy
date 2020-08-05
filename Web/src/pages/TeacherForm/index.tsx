@@ -45,8 +45,7 @@ const TeacherForm = () => {
   function handleCreateClass(e: FormEvent) {
     e.preventDefault();
 
-    api
-      .post("classes", {
+    api.post("classes", {
         name,
         avatar,
         whatsapp,
@@ -55,7 +54,8 @@ const TeacherForm = () => {
         cost: Number(cost),
         schedule: scheduleItems,
       })
-      .then(() => {
+      .then((response) => {
+        console.log(response)
         alert("Cadastro realizado com sucesso");
       })
       .catch((err) => {
