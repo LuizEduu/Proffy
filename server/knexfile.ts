@@ -5,7 +5,7 @@ module.exports = {
   connection: {
     host: "127.0.0.1",
     user: "postgres",
-    password: "docker",
+    password: "admin",
     database: "proffy",
   },
   migrations: {
